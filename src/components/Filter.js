@@ -5,8 +5,8 @@ export default class Filter extends Component {
         return (
             <div>
                 <h3>Sort by</h3>
-                <button>by name</button>
-                <button> weight</button>  
+                <button onClick={this.props.sortByName}>by name</button>
+                <button onClick={this.props.sortByWeight}> weight</button>  
                 <h3>Filter by</h3>            
                 <button onClick={this.props.handleFilter}>grease</button>
                 <br/>
