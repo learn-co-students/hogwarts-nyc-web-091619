@@ -105,6 +105,7 @@ ul {
 .pigTile h3 {
   color: #FBB;
 }
+
 .minPigTile {
   width: 250px;
   height: 250px;
@@ -113,12 +114,17 @@ ul {
 
 .maxPigTile {
   background-size: cover;
-  width: 500px;
-  height: 500px;
+  width: 250px;
+  height: 250px;
 }
 
 .pigTile:hover {
   transform: scale(1.05);
+}
+
+.pigGif{
+  width: 400px;
+  height: 300px;
 }
 
 
