@@ -4,7 +4,7 @@ import React from 'react';
 
 class Tile extends React.Component {
 
-    
+
 
     nameFormat = (name) => {
         return name.replace(/\s/g, '_').toLowerCase()
@@ -23,15 +23,15 @@ class Tile extends React.Component {
 
     render () {
 
-        console.log(this.nameFormat('Flexington Steel Kavorkian'))
+        // console.log(this.props)
 
         return (
             <div className="ui grid container">
 
             {this.props.hogs.map((hog, idx)=> {
                 let picture = require(`../hog-imgs/${this.nameFormat(hog.name)}.jpg`)
-            return <div className="ui eight wide column">
-                        <div className="pigTile" onClick={this.clickHandler} id={idx}> 
+            return <div className="ui eight wide column" id={idx}>
+                        <div className="pigTile" onClick={this.clickHandler}> 
                         {hog.name} <br/>
                         <img src={picture}></img>
                         <ul className='hogDetails' style={ {display: 'none'} }>
