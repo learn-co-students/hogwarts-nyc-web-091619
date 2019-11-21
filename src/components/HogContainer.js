@@ -6,7 +6,7 @@ export default class HogContainer extends Component {
 
   render() {
 
-    let hogCards = this.props.hogs.map(hog => < HogCard hog={hog} key={hog.name} />)
+    let hogCards = this.props.hogs.map(hog => < HogCard hog={hog} key={hog.name} greased={hog.greased}/>)
     console.log(hogCards)
     
     return (

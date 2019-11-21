@@ -14,12 +14,21 @@ class App extends Component {
     }
   }
 
+  handleFilter = ()=>{
+    
+    let filtered = hogs.filter(hog => hog.greased === true )
+    
+    
+    this.setState({
+      hogs: filtered
+    })
+  }
 
   render() {
     return (
       <div className="App">
           < Nav />
-          < Filter />
+          < Filter handleFilter={this.handleFilter}/>
           < HogContainer
             hogs={this.state.hogs}/>
       </div>
