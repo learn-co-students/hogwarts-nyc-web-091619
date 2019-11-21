@@ -15,7 +15,7 @@ export default class HogCard extends Component {
        return require(`../hog-imgs/${hogName}.jpg`)    
   }
    
-     clickHandler = (e) => {
+     clickHandler = () => {
        if(this.state.showDetails === false){
             this.setState({
                 showDetails: true
@@ -41,11 +41,11 @@ export default class HogCard extends Component {
             <img src={this.getImgPath(this.props.hog.name)} alt=''/>
             {this.state.showDetails?
               <div>
-            <h4>Specialty:{this.props.hog.specialty}</h4>
-            <h5>{this.isGreased()}</h5>
-            <h6>Weight:{this.props.hog.weight}</h6>
-            <h7>Medal:{this.props.hog['highest medal achieved']}</h7>
-             </div>
+                <h4>Specialty:{this.props.hog.specialty}</h4>
+                <h5>{this.isGreased()}</h5>
+                <h6>Weight:{this.props.hog.weight}</h6>
+                <h7>Medal:{this.props.hog['highest medal achieved']}</h7>
+              </div>
             : 
                 null
         }
