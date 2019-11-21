@@ -27,7 +27,7 @@ export default class HogCard extends Component {
         }
        }
 
-       isGreased = ()=>{
+       isGreased = () => {
            if (this.props.hog.greased === true){
             return 'FAT'
            } else {
@@ -48,7 +48,7 @@ export default class HogCard extends Component {
             <h7>Medal:{this.props.hog['highest medal achieved']}</h7>
              </div>
             : 
-            null
+                null
         }
         </div>
     )}
