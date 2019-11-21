@@ -3,15 +3,30 @@ import React from 'react'
 
 export default class Nav extends React.Component{
 
-	filterGreased = () => {
+	filterGreased = (e) => {
+		if(e.target.innerText === "Filter Greased"){
+			e.target.innerText = "Unfilter Greased"
+		}else{
+			e.target.innerText = "Filter Greased"
+		}
 		this.props.changeFilterState()
 	}
 
-	sortByName = () => {
+	sortByName = (e) => {
+		if(e.target.innerText === "Sort Name"){
+			e.target.innerText = "Unsort Name"
+		}else{
+			e.target.innerText = "Sort Name"
+		}
 		this.props.sortByName()
 	}
 
-	sortByWeight = () => {
+	sortByWeight = (e) => {
+		if(e.target.innerText === "Sort Weight"){
+			e.target.innerText = "Unsort Weight"
+		}else{
+			e.target.innerText = "Sort Weight"
+		}
 		this.props.sortByWeight()
 	}
 
