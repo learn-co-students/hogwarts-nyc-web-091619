@@ -6,10 +6,10 @@ import Tile from './Tile'
 
 class App extends Component {
 
-  state = {
-    // hogs: hogs,
-    greased: false
-  }
+  // state = {
+  //   // hogs: hogs,
+  //   greased: false
+  // }
 
   render() {
 

@@ -1,22 +1,33 @@
 import React from 'react';
+import HogImg from '../HogImgList';
 
 class Tile extends React.Component {
 
+    nameFormat = (name) => {
+        return name.replace(/\s/g, '_').toLowerCase()
+    }
 
+    // findHogImg = (formattedName) => {
+        
+    // }
 
     render () {
 
-        // console.log(typeof(this.props.hogs))
-        // console.log(this.props.hogs.hogs)
-        console.log(this.props.hogs)
+        console.log(this.nameFormat('Flexington Steel Kavorkian'))
 
         return (
             <div className="ui grid container">
+
             {this.props.hogs.map((hog, idx)=> {
-                return <div key={idx} className="ui eight wide column">
-                    <div className="pigTile"> {hog.name} </div>
+                let picture = require(`../hog-imgs/${this.nameFormat(hog.name)}.jpg`)
+            return <div key={idx} className="ui eight wide column">
+                        <div className="pigTile"> 
+                        {hog.name} <br/>
+                        <img src={picture}></img>
+                        </div>
                     </div>
             })}
+
             </div>
         )
     }
