@@ -12,8 +12,7 @@ export default class HogCard extends Component {
   getImgPath(name){
     let hogName = name.toLowerCase().split(' ').join('_')
     console.log(hogName)
-       return require(`../hog-imgs/${hogName}.jpg`)
-      
+       return require(`../hog-imgs/${hogName}.jpg`)    
   }
    
      clickHandler = (e) => {

@@ -15,30 +15,23 @@ class App extends Component {
   }
 
   handleFilter = ()=>{
-    
-    let filtered = hogs.filter(hog => hog.greased === true )
-    
-    
-    this.setState({
+       let filtered = hogs.filter(hog => hog.greased === true ) 
+        this.setState({
       hogs: filtered
     })
   }
 
   sortByName = () => {
     let sortedNames = hogs.sort((a, b) => a.name.localeCompare(b.name))
-  
     this.setState({
       hogs: sortedNames
-    })
-    
+    })  
   }
   sortByWeight = () => {
     let sortedWeight = hogs.sort((a, b) => a.weight - b.weight)
-  
     this.setState({
       hogs: sortedWeight
-    })
-    
+    })  
   }
 
   render() {
