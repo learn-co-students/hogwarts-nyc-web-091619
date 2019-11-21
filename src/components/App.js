@@ -3,6 +3,7 @@ import '../App.css';
 import Nav from './Nav'
 import hogs from '../porkers_data';
 import HogContainer from './HogContainer'
+import Filter from './Filter'
 
 class App extends Component {
 
@@ -18,9 +19,9 @@ class App extends Component {
     return (
       <div className="App">
           < Nav />
-          < HogContainer 
-            
-          hogs={this.state.hogs}/>
+          < Filter />
+          < HogContainer
+            hogs={this.state.hogs}/>
       </div>
     )
   }
